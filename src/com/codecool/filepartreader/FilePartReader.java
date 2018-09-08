@@ -39,11 +39,15 @@ public class FilePartReader {
         StringBuilder builder = new StringBuilder();
 
         for (int i = fromLine; i <= toLine; i++) {
-            builder.append(lines[i - 1]);
-            builder.append("\n");
+            String line = lines[i - 1].trim();
+
+            if (line.equals("")) continue;
+
+            builder.append(line);
+            if (i != toLine) builder.append("\n");
         }
 
-        return builder.toString().trim();
+        return builder.toString();
     }
 
 
