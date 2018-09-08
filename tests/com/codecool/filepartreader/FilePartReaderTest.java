@@ -8,12 +8,7 @@ import java.io.FileNotFoundException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FilePartReaderTest {
-    private FilePartReader reader;
-
-    @BeforeEach
-    void setUp() {
-        reader = new FilePartReader();
-    }
+    private FilePartReader reader = new FilePartReader();
 
     @Test
     void readThrowsExceptionWhenNoFileIsSpecified() {
